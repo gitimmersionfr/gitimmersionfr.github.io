@@ -4,6 +4,7 @@
   <title>Lab 16 - Git Immersion - Brought to you by EdgeCase</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <link rel="stylesheet" media="screen" href="reset.css">
   <link rel="stylesheet" media="screen" href="screen.css">
   <!--[if lt IE 9]>
@@ -89,7 +90,7 @@ git commit -m "Oops, we didn't want this commit"</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
 Finished one revert.
-[master 8451c58] Revert "Oops, we didn't want this commit"
+[master dc1f8be] Revert "Oops, we didn't want this commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Comme nous étions en train d&#8217;annuler le dernier commit que nous avions fait, nous avons été capable d&#8217;utiliser <code>HEAD</code> comme argument pour annuler. Nous pouvons annuler n&#8217;importe quel commit de manière arbitraire plus ancien dans l&#8217;historique en spécifiant simplement la valeur de son hash.</p>
@@ -100,12 +101,12 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 8451c58 2012-04-22 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
-* 6e54782 2012-04-22 | Oops, we didn't want this commit [Jim Weirich]
-* 495db55 2012-04-22 | Added a comment (v1) [Jim Weirich]
-* cbb7c54 2012-04-22 | Added a default value (v1-beta) [Jim Weirich]
-* 768fe29 2012-04-22 | Using ARGV [Jim Weirich]
-* 1c27851 2012-04-22 | First Commit [Jim Weirich]</pre>
+* dc1f8be 2012-04-22 | Revert "Oops, we didn't want this commit" (HEAD, master) [Jim Weirich]
+* 6c126e5 2012-04-22 | Oops, we didn't want this commit [Jim Weirich]
+* 641f925 2012-04-22 | Added a comment (v1) [Jim Weirich]
+* abef5ac 2012-04-22 | Added a default value (v1-beta) [Jim Weirich]
+* 295195f 2012-04-22 | Using ARGV [Jim Weirich]
+* fa65841 2012-04-22 | First Commit [Jim Weirich]</pre>
 <p>Cette technique fonctionnera avec n&#8217;importe quel commit (même si vous allez peut être devoir résoudre des conflits). C&#8217;est sûr pour être utilisé même sur les branches qui sont partagées sur des dépôts distants.</p>
 <h2>Quoi de plus <em>05</em></h2>
 <p>Maintenant, allons regarder une technique qui peut être utilisée pour enlever les commits les plus récents de l&#8217;historique du dépôt.</p>
@@ -193,3 +194,4 @@ Finished one revert.
   </footer>
 </body>
 </html>
+

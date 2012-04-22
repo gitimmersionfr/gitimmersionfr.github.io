@@ -4,6 +4,7 @@
   <title>Lab 13 - Git Immersion - Brought to you by EdgeCase</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <link rel="stylesheet" media="screen" href="reset.css">
   <link rel="stylesheet" media="screen" href="screen.css">
   <!--[if lt IE 9]>
@@ -90,7 +91,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at cbb7c54... Added a default value
+HEAD is now at abef5ac... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -106,11 +107,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was cbb7c54... Added a default value
-HEAD is now at 495db55... Added a comment
+Previous HEAD position was abef5ac... Added a default value
+HEAD is now at 641f925... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was 495db55... Added a comment
-HEAD is now at cbb7c54... Added a default value
+Previous HEAD position was 641f925... Added a comment
+HEAD is now at abef5ac... Added a default value
 </pre>
 <h2>Voir les tags en utilisant la commande <code>tag</code> <em>04</em></h2>
 <p>Vous pouvez voir quels tags sont disponibles en utilisant la commande <code>git tag</code>.</p>
@@ -127,10 +128,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* 495db55 2012-04-22 | Added a comment (v1, master) [Jim Weirich]
-* cbb7c54 2012-04-22 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 768fe29 2012-04-22 | Using ARGV [Jim Weirich]
-* 1c27851 2012-04-22 | First Commit [Jim Weirich]</pre>
+* 641f925 2012-04-22 | Added a comment (v1, master) [Jim Weirich]
+* abef5ac 2012-04-22 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* 295195f 2012-04-22 | Using ARGV [Jim Weirich]
+* fa65841 2012-04-22 | First Commit [Jim Weirich]</pre>
 <p>Vous pouvez voir les deux tags (<code>v1</code> et <code>v1-beta</code>) listés dans la sortie de log, avec à côté le nom de la branche (<code>master</code>).  Aussi, <code>HEAD</code> vous montre le commit qui est actuellement utilisé (qui est le <code>v1-beta</code> pour le moment).</p>
   </div>
 
@@ -216,3 +217,4 @@ v1-beta
   </footer>
 </body>
 </html>
+
