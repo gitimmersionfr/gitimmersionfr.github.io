@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lab 9 - Git Immersion - Brought to you by EdgeCase</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="screen" href="reset.css">
+  <link rel="stylesheet" media="screen" href="screen.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-1142510-7']);
+   _gaq.push(['_trackPageview']);
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="html5.js"></script>
+  <script type="text/javascript" src="jquery.hotkeys.js"></script>
+  <script type="text/javascript" src="UI.js"></script>
+</head>
+
+<body data-lab-id="9">
+  <div id="pager">
+    <ul>
+  <li class="arrow next">
+          <a href="lab_10.html#main_content">Suivant</a>
+      </li>
+  <li class="arrow previous">
+          <a href="lab_08.html#main_content">Précédent</a>
+      </li>
+  <li class="index_button"><a href="#">Index</a></li>
+</ul>
+
+
+  </div>
+  <header id="header">
+    <a href="index.html" id="home_link">Git Immersion</a>
+    <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
+
+    <nav>
+      <ul>
+  <li class="arrow next">
+          <a href="lab_10.html#main_content">Suivant</a>
+      </li>
+  <li class="arrow previous">
+          <a href="lab_08.html#main_content">Précédent</a>
+      </li>
+  <li class="index_button"><a href="#">Index</a></li>
+</ul>
+
+
+    </nav>
+    <div id="bookmark">Bookmark</div>
+  </header>
+
+  <div id="main_content">
+    <h1 class="lab_title"><em>lab 9</em>  Changements, pas fichiers</h1>
+<h3>Buts</h3>
+<ul>
+	<li>Apprendre que git fonctionne avec les changements, pas avec les fichiers.</li>
+</ul>
+<p>La plupart des logiciels de gestion de version travaillent avec des fichiers. Vous ajoutez un fichier à la source versionnée et le sytème suivra les changements que vous effectuez dessus à partir de ce moment.</p>
+<p>Git se concentre sur les changements dans un fichier plutôt que sur le fichier en lui même. Quand vous faites <code>git add file</code>, vous ne dites pas à git d&#8217;ajouter le fichier au dépôt. Vous dites plutôt que git devrait prendre en compte la situation de ce fichier pour qu&#8217;il soit commité plus tard.</p>
+<p>Nous allons chercher à vous faire explorer cette différence dans cette partie.</p>
+<h2>Premier changement: autoriser un nom de fichier par défaut <em>01</em></h2>
+<p>Changer le programme &#8220;Hello, World&#8221; pour avoir une valeur par défault si un argument est passé en ligne en commande si il n&#8217;est pas supplié.</p>
+<h4>File: <em>hello.rb</em></h4>
+<pre class="file">name = ARGV.first || "World"
+
+puts "Hello, #{name}!"
+</pre>
+<h2>Rajouter ce changement <em>02</em></h2>
+<p>Maintenant ajouter ce changement dans la déclaration des fichiers de git.</p>
+<h4>Execute:</h4>
+<pre class="instructions">git add hello.rb</pre>
+<h2>Deuxième changement: ajouter une commentaire <em>03</em></h2>
+<p>Maintenant ajouter un commentaire au programme &#8220;Hello, World&#8221;.</p>
+<h4>File: <em>hello.rb</em></h4>
+<pre class="file"># Default is "World"
+name = ARGV.first || "World"
+
+puts "Hello, #{name}!"
+</pre>
+<h2>Vérifier le status courant <em>04</em></h2>
+<h4>Execute:</h4>
+<pre class="instructions">git status</pre>
+<p>Vous devriez voir &#8230;</p>
+<h4>Output:</h4>
+<pre class="sample">$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD &lt;file&gt;..." to unstage)
+#
+#	modified:   hello.rb
+#
+# Changed but not updated:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#	modified:   hello.rb
+#
+</pre>
+<p>Remarquer comment <code>hello.rb</code> est listé deux fois dans le status. Le premier changement (ajouter une valeur par défaut) est déclarée et est prête à être commité. Le second changement (ajouter un commentaire) n&#8217;est pas déclaré. Si vous deviez commiter dès maintenant, le commentaire ne serait pas sauvé dans le dépôt.</p>
+<p>Maintenant essayons cela.</p>
+<h2>Commiter <em>05</em></h2>
+<p>Commiter le changement déclaré (la valeur par défaut), et ensuite revérifions le status.</p>
+<h4>Execute:</h4>
+<pre class="instructions">git commit -m "Added a default value"
+git status</pre>
+<p>Vous devriez voir &#8230;</p>
+<h4>Output:</h4>
+<pre class="sample">$ git commit -m "Added a default value"
+[master cbb7c54] Added a default value
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+$ git status
+# On branch master
+# Changed but not updated:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#	modified:   hello.rb
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+<p>La commande de status vous dis que <code>hello.rb</code> a des changements non enregistrés, mais n&#8217;est plus dans la liste des fichiers déclarés.</p>
+<h2>Ajouter le second changement <em>06</em></h2>
+<p>Maintenant ajouter le second changement à la liste des fichiers déclarés, ensuite lancer git status.</p>
+<h4>Execute:</h4>
+<pre class="instructions">git add .
+git status</pre>
+<p class="note"><strong>Note:</strong> Nous utilisons le répertoire courrant (&#8216;.&#8217;) comme le fichier à ajouter. C&#8217;est vraiment un raccourci pratique pour ajouter tous les changements au fichiers dans le répertoire courant et en dessous. Mais comme il ajoute tout, c&#8217;est <em>vraiment</em> une bonne idée de vérifier le status avant de faire un <tt>add .</tt>, juste pour s&#8217;assurer que vous n&#8217;ajoutez aucun fichier qui ne soit pas désiré.</p>
+<p class="note">Je voulais que voyiez l&#8217;astuce &#8220;add .&#8221;, mais nous allons continuer à ajouter explicitement les fichiers dans le reste du tutoriel juste pour être sûr.</p>
+<p>Vous devriez voir &#8230;</p>
+<h4>Output:</h4>
+<pre class="sample">$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD &lt;file&gt;..." to unstage)
+#
+#	modified:   hello.rb
+#
+</pre>
+<p>Maintenant le second changement a été déclaré et est prêt à être commité.</p>
+<h2>Commiter le second changement <em>07</em></h2>
+<h4>Execute:</h4>
+<pre class="instructions">git commit -m "Added a comment"</pre>
+  </div>
+
+  <div id="index">
+  <h1>Table des matières</h1>
+  <div id="show_bookmarks"></div>
+  <div id="no_bookmarks"></div>
+  <ul>
+    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Couverture de page d'accueil</a></li>
+          <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Configuration</a></li>
+          <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> Configuration supplémentaire</a></li>
+          <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Créer un projet</a></li>
+          <li data-lab-id="4"><a href="lab_04.html"><span>4:</span> Vérifier le status</a></li>
+          <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Effectuer des changements</a></li>
+          <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Déclarer les changements</a></li>
+          <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Déclarer et commiter</a></li>
+          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiter les changements</a></li>
+          <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changements, pas fichiers</a></li>
+          <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> Historique</a></li>
+          <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Alias</a></li>
+          <li data-lab-id="12"><a href="lab_12.html"><span>12:</span> Obtenir de vieille versions</a></li>
+          <li data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagger des versions</a></li>
+          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Annuler les changements locaux (avant les déclarations)</a></li>
+          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Annuler les déclarations de fichiers changés (avant de commiter)</a></li>
+          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Annuler les changements déjà commités</a></li>
+          <li data-lab-id="17"><a href="lab_17.html"><span>17:</span> Enlever des commits d'une branche</a></li>
+          <li data-lab-id="18"><a href="lab_18.html"><span>18:</span> Remove the oops tag</a></li>
+          <li data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amending Commits</a></li>
+          <li data-lab-id="20"><a href="lab_20.html"><span>20:</span> Moving Files</a></li>
+          <li data-lab-id="21"><a href="lab_21.html"><span>21:</span> More Structure</a></li>
+          <li data-lab-id="22"><a href="lab_22.html"><span>22:</span> Git Internals: The .git directory</a></li>
+          <li data-lab-id="23"><a href="lab_23.html"><span>23:</span> Git Internals: Working directly with Git Objects</a></li>
+          <li data-lab-id="24"><a href="lab_24.html"><span>24:</span> Creating a Branch</a></li>
+          <li data-lab-id="25"><a href="lab_25.html"><span>25:</span> Navigating Branches</a></li>
+          <li data-lab-id="26"><a href="lab_26.html"><span>26:</span> Changes in Master</a></li>
+          <li data-lab-id="27"><a href="lab_27.html"><span>27:</span> Viewing Diverging Branches</a></li>
+          <li data-lab-id="28"><a href="lab_28.html"><span>28:</span> Merging</a></li>
+          <li data-lab-id="29"><a href="lab_29.html"><span>29:</span> Creating a Conflict</a></li>
+          <li data-lab-id="30"><a href="lab_30.html"><span>30:</span> Resolving Conflicts</a></li>
+          <li data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebasing VS Merging</a></li>
+          <li data-lab-id="32"><a href="lab_32.html"><span>32:</span> Resetting the Greet Branch</a></li>
+          <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
+          <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
+          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
+          <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
+          <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
+          <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>
+          <li data-lab-id="40"><a href="lab_40.html"><span>40:</span> Remote Branches</a></li>
+          <li data-lab-id="41"><a href="lab_41.html"><span>41:</span> Change the Original Repository</a></li>
+          <li data-lab-id="42"><a href="lab_42.html"><span>42:</span> Fetching Changes</a></li>
+          <li data-lab-id="43"><a href="lab_43.html"><span>43:</span> Merging Pulled Changes</a></li>
+          <li data-lab-id="44"><a href="lab_44.html"><span>44:</span> Pulling Changes</a></li>
+          <li data-lab-id="45"><a href="lab_45.html"><span>45:</span> Adding a Tracking Branch</a></li>
+          <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
+          <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
+          <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
+          <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
+          <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>
+          <li data-lab-id="53"><a href="lab_53.html"><span>53:</span> Merci</a></li>
+      </ul>
+</div>
+
+
+
+  <footer id="footer">
+    <nav>
+      <ul>
+  <li class="arrow next">
+          <a href="lab_10.html#main_content">Suivant</a>
+      </li>
+  <li class="arrow previous">
+          <a href="lab_08.html#main_content">Précédent</a>
+      </li>
+  <li class="index_button"><a href="#">Index</a></li>
+</ul>
+
+
+    </nav>
+    <a href="http://edgecase.com" target="_blank" id="edgecase_link_small">EdgeCase</a>
+  </footer>
+</body>
+</html>
