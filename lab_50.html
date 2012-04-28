@@ -65,22 +65,22 @@
     <h1 class="lab_title"><em>lab 50</em>  Héberger vos dépôts Git</h1>
 <h3>Buts</h3>
 <ul>
-	<li>Learn how to setup git server for sharing repositories.</li>
+	<li>Apprendre comment configurer un serveur git pour partager des dépôts.</li>
 </ul>
-<p>There are many ways to share git repositories over the network. Here is a quick and dirty way.</p>
-<h2>Start up the git server <em>01</em></h2>
+<p>Il y a de nombreux moyens de partager des dépôts git via un réseau. Voici une méthode rapide et pas &#8220;très propre&#8221;.</p>
+<h2>Démarrer le serveur git <em>01</em></h2>
 <h4>Execute:</h4>
-<pre class="instructions"># (From the work directory)
+<pre class="instructions"># (Depuis le répertoire de travail)
 git daemon --verbose --export-all --base-path=.</pre>
-<p>Now, in a separate terminal window, go to your work directory</p>
+<p>Maintenant, dans une fenêtre de terminal séparée, aller au répertoire de travail</p>
 <h4>Execute:</h4>
 <pre class="instructions"># (From the work directory)
 git clone git://localhost/hello.git network_hello
 cd network_hello
 ls</pre>
-<p>You should see a copy of hello project.</p>
-<h2>Pushing to the Git Daemon <em>02</em></h2>
-<p>If you want to push to the git daemon repository, add <code>--enable=receive-pack</code> to the git daemon command.  Be careful because there is no authentication on this server, anyone could push to your repository.</p>
+<p>Vous devriez voir une copie du projet hello.</p>
+<h2>Envoyer vers le démon Git <em>02</em></h2>
+<p>Si vous voulez pouvoir pousser vers le dépôt du démon git, ajouter <code>--enable=receive-pack</code> à la commande du démon git. Faites attention parce qu&#8217;il n&#8217;y a pas d&#8217;authentification sur le serveur, n&#8217;importe qui peut pousser vers votre dépôt.</p>
   </div>
 
   <div id="index">
@@ -137,7 +137,7 @@ ls</pre>
           <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
           <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
           <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
           <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
           <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
           <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>

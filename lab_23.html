@@ -75,7 +75,7 @@
 <p>This should show the latest commit made in the repository.  The SHA1 hash on your system is probably different that what is on mine, but you should see something like this.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist --max-count=1
-* 3555dd7 2012-04-22 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
+* cb1bb8e 2012-04-28 | Added a Rakefile. (HEAD, master) [Jim Weirich]</pre>
 <h2>Dumping the Latest Commit <em>02</em></h2>
 <p>Using the SHA1 hash from the commit listed above &#8230;</p>
 <h4>Execute:</h4>
@@ -83,13 +83,13 @@
 git cat-file -p &lt;hash&gt;</pre>
 <p>Here&#8217;s my output &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git cat-file -t 3555dd7
+<pre class="sample">$ git cat-file -t cb1bb8e
 commit
-$ git cat-file -p 3555dd7
+$ git cat-file -p cb1bb8e
 tree 096b74c56bfc6b40e754fc0725b8c70b2038b91e
-parent e99f536ad65b362f11038ea6d97841e0a42aa337
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1335130925 +0200
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1335130925 +0200
+parent f1d027cd8f0811992b41863498b96a08d10c0ac3
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1335644179 +0200
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1335644179 +0200
 
 Added a Rakefile.
 </pre>
@@ -184,7 +184,7 @@ puts "Hello, #{name}!"
           <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
           <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
           <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
           <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
           <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
           <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>

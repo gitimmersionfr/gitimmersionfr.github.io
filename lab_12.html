@@ -75,10 +75,10 @@ de travail.</li>
 <p class="note"><strong>Note:</strong> Vous vous rappelez avoir défini <code>hist</code> dans votre fichier <code>.gitconfig</code>, n&#8217;est ce pas? Si ce n&#8217;est pas le cas, revoyez le tutoriel sur les alias.</p>
 <h4>Output:</h4>
 <pre class="sample">$ git hist
-* 641f925 2012-04-22 | Added a comment (HEAD, master) [Jim Weirich]
-* abef5ac 2012-04-22 | Added a default value [Jim Weirich]
-* 295195f 2012-04-22 | Using ARGV [Jim Weirich]
-* fa65841 2012-04-22 | First Commit [Jim Weirich]</pre>
+* 3d2a00b 2012-04-28 | Added a comment (HEAD, master) [Jim Weirich]
+* 09cad4e 2012-04-28 | Added a default value [Jim Weirich]
+* 1e86dea 2012-04-28 | Using ARGV [Jim Weirich]
+* 49a284b 2012-04-28 | First Commit [Jim Weirich]</pre>
 <p>Examiner la sortie du log et trouver le hash pour le premier commit. Cela doit être la dernière ligne de la sortie de <code>git hist</code>. Utiliser le code hash (les 7 premiers caractères sont suffisants) dans la commande ci-dessous. Ensuite, vérifier le contenu du fichier hello.rb.</p>
 <h4>Execute:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -87,8 +87,8 @@ cat hello.rb</pre>
 <p class="note"><strong>Note:</strong> De nombreuses commandes dépendent des valeurs de hash dans le dépôt. Comme vos valeurs de hash vont changer des miennes, chaque fois que vous voyez quelque chose comme &lt;hash&gt; ou &lt;treehash&gt; dans la commande, remplacer la valeur par votre propre valeur de dépôt.</p>
 <p>Vous devriez voir &#8230;</p>
 <h4>Output:</h4>
-<pre class="sample">$ git checkout fa65841
-Note: checking out 'fa65841'.
+<pre class="sample">$ git checkout 49a284b
+Note: checking out '49a284b'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -99,7 +99,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at fa65841... First Commit
+HEAD is now at 49a284b... First Commit
 $ cat hello.rb
 puts "Hello, World"
 </pre>
@@ -112,7 +112,7 @@ cat hello.rb</pre>
 <p>Vous devriez voir &#8230;</p>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was fa65841... First Commit
+Previous HEAD position was 49a284b... First Commit
 Switched to branch 'master'
 $ cat hello.rb
 # Default is "World"
@@ -177,7 +177,7 @@ puts "Hello, #{name}!"
           <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
           <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
           <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
           <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
           <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
           <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>

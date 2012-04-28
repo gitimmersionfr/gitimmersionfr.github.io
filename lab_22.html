@@ -82,8 +82,8 @@ COMMIT_EDITMSG	description  hooks  info   objects  refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects
-09  24	28  35	59  69	6c  93	9c  af	c4  e4	e9  fc	  pack
-11  27	29  43	64  6b	78  97	ab  b5	dc  e7	fa  info
+09  1e	27  3d	49  69	78  97	af  c4	d8  e7	f1    pack
+11  24	28  43	59  6b	79  9c	b5  cb	e4  e8	info
 </pre>
 <p>You should see a bunch of directories with 2 letter names.  The directory names are the first two letters of the sha1 hash of the object stored in git.</p>
 <h2>Deeper into the Object Store <em>03</em></h2>
@@ -91,7 +91,8 @@ COMMIT_EDITMSG	description  hooks  info   objects  refs
 <pre class="instructions">ls -C .git/objects/&lt;dir&gt;</pre>
 <h4>Output:</h4>
 <pre class="sample">$ ls -C .git/objects/09
-6b74c56bfc6b40e754fc0725b8c70b2038b91e	9fb6f9d3a104feb32fcac22354c4d0e8a182c1
+6b74c56bfc6b40e754fc0725b8c70b2038b91e	cad4e5c464a60af72a13bb9436474457a30379
+9fb6f9d3a104feb32fcac22354c4d0e8a182c1
 </pre>
 <p>Look in one of the two-letter directories.  You should see some files with 38-character names.  These are the files that contain the objects stored in git.  These files are compressed and encoded, so looking at their contents directly won&#8217;t be very helpful, but we will take a closer look in a bit.</p>
 <h2>Config File <em>04</em></h2>
@@ -125,7 +126,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-641f925c610d578d657754cc0ba0f37bed598f85
+3d2a00b648f4eeb35f5cc14a5780eadfff2cd35a
 </pre>
 <p>You should recognize the files in the tags subdirectory.  Each file corresponds to a tag you created with the <code>git tag</code> command earlier. Its content is just the hash of the commit tied to the tag.</p>
 <p>The heads directory is similar, but is used for branches rather than tags.  We only have one branch at the moment, so all you will see is master in this directory.</p>
@@ -193,7 +194,7 @@ ref: refs/heads/master
           <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
           <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
           <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
           <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
           <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
           <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>

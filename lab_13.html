@@ -91,7 +91,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at abef5ac... Added a default value
+HEAD is now at 09cad4e... Added a default value
 $ cat hello.rb
 name = ARGV.first || "World"
 
@@ -107,11 +107,11 @@ puts "Hello, #{name}!"
 git checkout v1-beta</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was abef5ac... Added a default value
-HEAD is now at 641f925... Added a comment
+Previous HEAD position was 09cad4e... Added a default value
+HEAD is now at 3d2a00b... Added a comment
 $ git checkout v1-beta
-Previous HEAD position was 641f925... Added a comment
-HEAD is now at abef5ac... Added a default value
+Previous HEAD position was 3d2a00b... Added a comment
+HEAD is now at 09cad4e... Added a default value
 </pre>
 <h2>Voir les tags en utilisant la commande <code>tag</code> <em>04</em></h2>
 <p>Vous pouvez voir quels tags sont disponibles en utilisant la commande <code>git tag</code>.</p>
@@ -128,10 +128,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>Output:</h4>
 <pre class="sample">$ git hist master --all
-* 641f925 2012-04-22 | Added a comment (v1, master) [Jim Weirich]
-* abef5ac 2012-04-22 | Added a default value (HEAD, v1-beta) [Jim Weirich]
-* 295195f 2012-04-22 | Using ARGV [Jim Weirich]
-* fa65841 2012-04-22 | First Commit [Jim Weirich]</pre>
+* 3d2a00b 2012-04-28 | Added a comment (v1, master) [Jim Weirich]
+* 09cad4e 2012-04-28 | Added a default value (HEAD, v1-beta) [Jim Weirich]
+* 1e86dea 2012-04-28 | Using ARGV [Jim Weirich]
+* 49a284b 2012-04-28 | First Commit [Jim Weirich]</pre>
 <p>Vous pouvez voir les deux tags (<code>v1</code> et <code>v1-beta</code>) listés dans la sortie de log, avec à côté le nom de la branche (<code>master</code>).  Aussi, <code>HEAD</code> vous montre le commit qui est actuellement utilisé (qui est le <code>v1-beta</code> pour le moment).</p>
   </div>
 
@@ -189,7 +189,7 @@ v1-beta
           <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
           <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
           <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Pulling Shared Changes</a></li>
+          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
           <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
           <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
           <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>
