@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,9 +36,9 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_14.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_12.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
@@ -80,7 +79,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at 1f6ac8e... Ajouter une valeur par défaut
+HEAD is now at a81dfe7... Ajouter une valeur par défaut
 $ cat bonjour.rb
 nom = ARGV.first || "Monde"
 
@@ -96,11 +95,11 @@ puts "Bonjour, #{nom}!"
 git checkout v1-beta</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was 1f6ac8e... Ajouter une valeur par défaut
-HEAD is now at 9da17c3... Ajout d'un commentaire
+Previous HEAD position was a81dfe7... Ajouter une valeur par défaut
+HEAD is now at 392ee14... Ajout d'un commentaire
 $ git checkout v1-beta
-Previous HEAD position was 9da17c3... Ajout d'un commentaire
-HEAD is now at 1f6ac8e... Ajouter une valeur par défaut
+Previous HEAD position was 392ee14... Ajout d'un commentaire
+HEAD is now at a81dfe7... Ajouter une valeur par défaut
 </pre>
 <h2>Voir les tags en utilisant la commande <code>tag</code> <em>04</em></h2>
 <p>Vous pouvez voir quels tags sont disponibles en utilisant la commande <code>git tag</code>.</p>
@@ -117,10 +116,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist master --all
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (v1, master) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut (HEAD, v1-beta) [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* 392ee14 2012-05-07 | Ajout d'un commentaire (v1, master) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (HEAD, v1-beta) [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <p>Vous pouvez voir les deux tags (<code>v1</code> et <code>v1-beta</code>) listés dans la sortie de log, avec à côté le nom de la branche (<code>master</code>). Aussi, <code>HEAD</code> vous montre le commit qui est actuellement utilisé (qui est le <code>v1-beta</code> pour le moment).</p>
   </div>
 
@@ -162,8 +161,8 @@ v1-beta
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>

@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,9 +36,9 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_18.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_16.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
@@ -74,12 +73,12 @@ correspondre au commit spécifié</li>
 <pre class="instructions">git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist
-* 5cc6a21 2012-05-06 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
-* 905d6e9 2012-05-06 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (v1) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* 21a19c5 2012-05-07 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
+* 96001a0 2012-05-07 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
+* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <p>Nous voyons que nous avons un commit &#8220;Oups&#8221; et un commit &#8220;Annuler Oups&#8221; comme deux derniers commits fait dans cette branche. Maintenant enlevons-les en utilisant reset.</p>
 <h2>En premier, marquer cette branche <em>03</em></h2>
 <p>mais avant d&#8217;enlever les commits, marquons le dernier commit avec un tag pour que nous puissions encore le retrouver.</p>
@@ -92,12 +91,12 @@ correspondre au commit spécifié</li>
 git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at 9da17c3 Ajout d'un commentaire
+HEAD is now at 392ee14 Ajout d'un commentaire
 $ git hist
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <p>Notre branche master branch pointe maintenant vers le commit v1 et le commit Oups et le commit Annuler Oups nes ont plus dans la branche. Le paramètre <code>--hard</code> indique que le répertoire de travail devrait être mis à jour pour être consistant avec le head de la nouvelle branche.</p>
 <h2>Rien n&#8217;est jamais perdu <em>05</em></h2>
 <p>Mais qu&#8217;est il arrivé aux mauvais commits? En fait les commits sont toujours dans le dépôt. D&#8217;ailleurs, nous pouvons toujours les référencer. Rappelez vous qu&#8217;au début de cette partie, nous avons taggé le commit d&#8217;annulation avec le tag &#8220;oups&#8221;. Regardons <em>tous</em> les commits.</p>
@@ -105,12 +104,12 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --all
-* 5cc6a21 2012-05-06 | Revert "Oups, nous  ne voulions pas ce commit" (oups) [Jim Weirich]
-* 905d6e9 2012-05-06 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* 21a19c5 2012-05-07 | Revert "Oups, nous  ne voulions pas ce commit" (oups) [Jim Weirich]
+* 96001a0 2012-05-07 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
+* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <p>Ici nous voyons que les mauvais commits n&#8217;ont pas disparus. Ils sont toujours dans le dépôt. C&#8217;est juste qu&#8217;ils ne sont plus listés dans la branche master. Si nous ne les avions pas taggés, ils seraient toujours dans le dépôt, mais il n&#8217;y aurait plus moyen de les référencer autrement que par leur nom de hash. Les commits non référencés restent dans le dépôt jusqu&#8217;à ce que le système lance l&#8217;utilitaire de nettoyage mémoire.</p>
 <h2>Les dangers du reset <em>06</em></h2>
 <p>Les réinitialisations sur les branches locales sont généralement sûres. N&#8217;importe quel accident peut être généralement récupéré en faisant un reset avec le commit désiré.</p>
@@ -155,8 +154,8 @@ $ git hist
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>

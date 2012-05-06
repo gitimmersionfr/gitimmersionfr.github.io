@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,9 +36,9 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_24.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_22.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
@@ -65,7 +64,7 @@ le dépôt</li>
 <p>Cela devrait montrer le dernier commit fait dans le dépôt. Le hash SHA1 sur votre système est probablement différent de celui qui est chez nous, mais vous devriez voir quelque chose de ce type.</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --max-count=1
-* b33d944 2012-05-06 | Ajout d'un Rakefile (HEAD, master) [Jim Weirich]</pre>
+* 50288bc 2012-05-07 | Ajout d'un Rakefile (HEAD, master) [Jim Weirich]</pre>
 <h2>Extraire les infos du dernier commit <em>02</em></h2>
 <p>Utiliser le hash SHA1 depuis le commit listé ci-dessus &#8230;</p>
 <h4>Exécuter:</h4>
@@ -73,13 +72,13 @@ le dépôt</li>
 git cat-file -p &lt;hash&gt;</pre>
 <p>Voici notre sortie &#8230;</p>
 <h4>En sortie:</h4>
-<pre class="sample">$ git cat-file -t b33d944
+<pre class="sample">$ git cat-file -t 50288bc
 commit
-$ git cat-file -p b33d944
+$ git cat-file -p 50288bc
 tree 81ce6541c9dfbf939e753a1d4b7f8544fdf4c10d
-parent d2d52515fd9195f061b6d44c4716714e8271073a
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1336338820 +0200
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1336338820 +0200
+parent fdbaff516648118f065ac92680c38dfc815b1664
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1336344673 +0200
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1336344673 +0200
 
 Ajout d'un Rakefile
 </pre>
@@ -158,8 +157,8 @@ puts "Bonjour, #{nom}!"
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>

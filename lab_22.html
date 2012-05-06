@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,9 +36,9 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_23.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_21.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
@@ -71,8 +70,8 @@ COMMIT_EDITMSG	description  hooks  info   objects  refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ ls -C .git/objects
-08  19	1f  29	5a  65	83  90	a1  a5	b3  c6	d4  info
-11  1a	26  2f	5c  81	87  9d	a4  ad	c3  d2	e7  pack
+08  11	1a  26	2f  50	65  83	96  a1	a5  d4	f5  info
+0e  19	21  29	39  5a	81  87	9d  a4	a8  e7	fd  pack
 </pre>
 <p>Vous devriez voir un ensemble de répertoires avec des noms de 2 lettres. Les noms des répertoires sont les deux premières lettres du hash sha1 de l&#8217;objet stocké dans git.</p>
 <h2>Approfondissement sur le magasin d&#8217;objets <em>03</em></h2>
@@ -114,7 +113,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-9da17c3e1bab49dcebaaab2f1e838821587ab797
+392ee14d697885141b8056a4b03e901cf617e997
 </pre>
 <p>Vous devriez reconnaître les fichiers dans le sous-répertoire des tags. Chaque fichier correspond à un tag que vous avez créé avec la commande <code>git tag</code> un peu plus tôt. Son contenu est juste le hash du commit associé au tag.</p>
 <p>Le répertoire heads est similaire, mais est utilisé par les branches plutôt que les tags. Nous avons seulement une branche pour le moment, ainsi tout ce que verrez dans ce répertoire est master.</p>
@@ -166,8 +165,8 @@ ref: refs/heads/master
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>

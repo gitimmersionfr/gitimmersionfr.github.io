@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,9 +36,9 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_11.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_09.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
@@ -62,27 +61,27 @@
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log
-commit 9da17c3e1bab49dcebaaab2f1e838821587ab797
+commit 392ee14d697885141b8056a4b03e901cf617e997
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun May 6 23:13:40 2012 +0200
+Date:   Mon May 7 00:51:12 2012 +0200
 
     Ajout d'un commentaire
 
-commit 1f6ac8e4f3e427d4b4757f76af441e1304c87903
+commit a81dfe7d7b0fb603dc1d341ef9570a995453b63b
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun May 6 23:13:40 2012 +0200
+Date:   Mon May 7 00:51:12 2012 +0200
 
     Ajouter une valeur par défaut
 
-commit ad21f9ef8501c60dce33c30af76293c7dd793a82
+commit 9de1147332fb45c8e5d2096bafe0968eae2edbbe
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun May 6 23:13:40 2012 +0200
+Date:   Mon May 7 00:51:12 2012 +0200
 
     Utilisation de ARGV
 
-commit c3df0aa73c03481123d1d372a1e9738cc78f063f
+commit f5556a9336f9e871d07dad35379837b19eb28259
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Sun May 6 23:13:40 2012 +0200
+Date:   Mon May 7 00:51:12 2012 +0200
 
     Mon premier commit
 </pre>
@@ -94,10 +93,10 @@ Date:   Sun May 6 23:13:40 2012 +0200
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log --pretty=oneline
-9da17c3e1bab49dcebaaab2f1e838821587ab797 Ajout d'un commentaire
-1f6ac8e4f3e427d4b4757f76af441e1304c87903 Ajouter une valeur par défaut
-ad21f9ef8501c60dce33c30af76293c7dd793a82 Utilisation de ARGV
-c3df0aa73c03481123d1d372a1e9738cc78f063f Mon premier commit
+392ee14d697885141b8056a4b03e901cf617e997 Ajout d'un commentaire
+a81dfe7d7b0fb603dc1d341ef9570a995453b63b Ajouter une valeur par défaut
+9de1147332fb45c8e5d2096bafe0968eae2edbbe Utilisation de ARGV
+f5556a9336f9e871d07dad35379837b19eb28259 Mon premier commit
 </pre>
 <h2>Contrôler quelles entrées sont affichées <em>02</em></h2>
 <p>Il y a beaucoup d&#8217;options pour sélectionner quelles entrées sont affichées dans le log. Jouez avec les commandes suivantes:</p>
@@ -117,10 +116,10 @@ git log --pretty=oneline --all</pre>
 <p>Cela ressemble à:</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <p>Regardons cette ligne dans le détail:</p>
 <ul>
 	<li><code>--pretty="..."</code> définit le format de sortie.</li>
@@ -175,8 +174,8 @@ git log --pretty=oneline --all</pre>
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>

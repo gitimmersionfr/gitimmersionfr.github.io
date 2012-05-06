@@ -12,7 +12,6 @@
   <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-31474857-1']);
-   _gaq.push(['_setDomainName', 'gitimmersion.fr']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -37,59 +36,64 @@
     <a href="index.html" id="home_link">Git Immersion</a>
     <nav id="pager">
       <a id="arrow_next" class="arrow" href="lab_35.html">Suivant</a>
-
+  
       <a id="arrow_previous" class="arrow" href="lab_33.html">Précédent</a>
-
+  
   <a id="table_of_contents_link" href="#">Table des matières</a>
   <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
   <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
 </nav>
 
 
-    <h1 class="lab_title"><em>lab 34</em> Rebasing</h1>
+    <h1 class="lab_title"><em>lab 34</em> Rebaser</h1>
     <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
-    <h1 class="lab_title"><em>lab 34</em>  Rebasing</h1>
-<h3>Goals</h3>
+    <h1 class="lab_title"><em>lab 34</em>  Rebaser</h1>
+<h3>Buts</h3>
 <ul>
-	<li>Use the rebase command rather than the merge command.</li>
+	<li>Utiliser la commande rebase plutôt que la commande merge.</li>
 </ul>
-<p>Ok, we are back in time before the first merge and we want to get the changes in master into our greet branch.</p>
-<p>This time we will use the rebase command instead of the merge command to bring in the changes from the master branch.</p>
+<p>Ok, nous sommes maintenant revenu dans le temps avant la première fusion et nous voulons obtenir les changements de master dans notre branche saluer.</p>
+<p>Cette fois nous allons utiliser la commande rebase à la place de la commande merge pour apporter les changements depuis la branche master.</p>
 <h4>Exécuter:</h4>
-<pre class="instructions">git checkout greet
+<pre class="instructions">git checkout saluer
 git rebase master
 git hist</pre>
 <h4>En sortie:</h4>
-<pre class="sample">$ go greet
-Switched to branch 'greet'
+<pre class="sample">$ go saluer
+Switched to branch 'saluer'
 $
 $ git rebase master
 First, rewinding head to replay your work on top of it...
-Applying: added Greeter class
-Applying: bonjour uses Greeter
-Applying: updated Rakefile
+Applying: Ajout de la classe Faireunsalut
+Applying: bonjour utilise Faireunsalut
+Applying: Rakefile mis à jour
 $
 $ git hist
-* 62d4c28 2012-05-06 | Ajout d'un LISEZMOI (HEAD, master) [Jim Weirich]
-* b33d944 2012-05-06 | Ajout d'un Rakefile [Jim Weirich]
-* d2d5251 2012-05-06 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 65d4697 2012-05-06 | Add an author/email comment [Jim Weirich]
-* 9da17c3 2012-05-06 | Ajout d'un commentaire (v1) [Jim Weirich]
-* 1f6ac8e 2012-05-06 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* ad21f9e 2012-05-06 | Utilisation de ARGV [Jim Weirich]
-* c3df0aa 2012-05-06 | Mon premier commit [Jim Weirich]</pre>
+* c8f930f 2012-05-07 | Rakefile mis à jour (HEAD, saluer) [Jim Weirich]
+* 4a01131 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
+* edbb2f8 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
+* fe9164f 2012-05-07 | Ajout d'un LISEZMOI (master) [Jim Weirich]
+* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
+* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
+* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
+* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
 <h2>Merge VS Rebase <em>01</em></h2>
-<p>The final result of the rebase is very similar to the merge.  The greet branch now contains all of its changes, as well as all the changes from the master branch.  However, the commit tree is quite different.  The commit tree for the greet branch has been rewritten so that the master branch is a part of the commit history.  This leaves the chain of commits linear and much easier to read.</p>
-<h2>When to Rebase, When to Merge? <em>02</em></h2>
-<p>Don&#8217;t use rebase &#8230;</p>
+<p>Le résultat final de rebase est très similaire à celui de merge. La branche saluer contient maintenant tous ses changements, aussi bien que tous ceux de la branche master. Cependant, l&#8217;arbre de commit est assez différent. L&#8217;arbre de commit pour la branche saluer a été réécrit de manière à ce que la branche master soit une partie de l&#8217;historique de commit. Cela laisse une chaîne de commit linéaire et beaucoup plus facile à lire.</p>
+<h2>Quand faire un Rebase, quand faire un Merge? <em>02</em></h2>
+<p>Ne pas utiliser rebase quand &#8230;</p>
 <ol>
-	<li>If the branch is public and shared with others.  Rewriting publicly shared branches will tend to screw up other members of the team.</li>
-	<li>When the <em>exact</em> history of the commit branch is important (since rebase rewrites the commit history).</li>
+	<li>Si la branche est publique et partagée avec d&#8217;autres. Réécrire publiquement des<br />
+branches partagées risque surtout &#8220;d&#8217;emmerder&#8221; les autres membres de votre équipe.</li>
+	<li>Quand l&#8217;historique <em>exacte</em> de votre branche de commit est importante (étant<br />
+donné que rebase réécrit l&#8217;historique de commit).</li>
 </ol>
-<p>Given the above guidelines, I tend to use rebase for short-lived, local branches and merge for branches in the public repository.</p>
+<p>En suivant les règles ci-dessus, je tend à utiliser rebase pour des branches locales à usage court et merge pour les branches partagées dans le dépôt public</p>
   </div>
 
   <div id="index">
@@ -130,8 +134,8 @@ $ git hist
           <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
           <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
           <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
-          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Réinitialiser la branche Master</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebaser</a></li>
           <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
           <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
           <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>
