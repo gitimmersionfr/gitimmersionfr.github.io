@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Lab 11 - Git Immersion - Brought to you by EdgeCase</title>
+  <title>Lab 11 - Git Immersion - Mis à votre disposition par EdgeCase - Traduction Thomas Gratier</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  <link rel="stylesheet" media="screen" href="reset.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="screen" href="screen.css">
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
   <script type="text/javascript">
    var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-1142510-7']);
+   _gaq.push(['_setAccount', 'UA-31474857-1']);
    _gaq.push(['_trackPageview']);
    (function() {
      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -22,43 +20,33 @@
    })();
   </script>
   <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="html5.js"></script>
   <script type="text/javascript" src="jquery.hotkeys.js"></script>
   <script type="text/javascript" src="UI.js"></script>
 </head>
 
 <body data-lab-id="11">
-  <div id="pager">
-    <ul>
-  <li class="arrow next">
-          <a href="lab_12.html#main_content">Suivant</a>
-      </li>
-  <li class="arrow previous">
-          <a href="lab_10.html#main_content">Précédent</a>
-      </li>
-  <li class="index_button"><a href="#">Index</a></li>
-</ul>
-
-
+  <div id="image_preloader">
+    <img src="green_circle_blur.png">
+    <img src="label_blur.png">
+    <img src="logo_small_blur.png">
+    <img src="prompt_blur.png">
+    <img src="pager_blur.png">
   </div>
   <header id="header">
     <a href="index.html" id="home_link">Git Immersion</a>
-    <a href="http://edgecase.com" target="_blank" id="edgecase_link">Brought to you by EdgeCase</a>
-
-    <nav>
-      <ul>
-  <li class="arrow next">
-          <a href="lab_12.html#main_content">Suivant</a>
-      </li>
-  <li class="arrow previous">
-          <a href="lab_10.html#main_content">Précédent</a>
-      </li>
-  <li class="index_button"><a href="#">Index</a></li>
-</ul>
+    <nav id="pager">
+      <a id="arrow_next" class="arrow" href="lab_12.html">Suivant</a>
+  
+      <a id="arrow_previous" class="arrow" href="lab_10.html">Précédent</a>
+  
+  <a id="table_of_contents_link" href="#">Table des matières</a>
+  <a id="bookmark_link"><span id="bookmark"></span>Mettre en favori cette partie</a>
+  <a id="edgecase_link" href="http://edgecase.com" target="_blank">EdgeCase</a>
+</nav>
 
 
-    </nav>
-    <div id="bookmark">Bookmark</div>
+    <h1 class="lab_title"><em>lab 11</em> Alias</h1>
+    <a href="http://edgecase.com" target=_blank" id="other_edgecase_link">EdgeCase</a>
   </header>
 
   <div id="main_content">
@@ -70,7 +58,7 @@
 <h2>Alias communs <em>01</em></h2>
 <p><ins>git status</ins>, <ins>git add</ins>, <ins>git commit</ins>, et <ins>git checkout</ins> sont ces commandes habituelles dont il est utile d&#8217;avoir des abbréviations.</p>
 <p>Ajouter ce qui suit dans le fichier .gitconfig dans votre répertoire $<span class="caps">HOME</span>.</p>
-<h4>File: <em>.gitconfig</em></h4>
+<h4>Fichier: <em>.gitconfig</em></h4>
 <pre class="file">[alias]
   co = checkout
   ci = commit
@@ -87,9 +75,9 @@
 <h2><code>Type</code> et <code>Dump</code> <em>03</em></h2>
 <p>Nous avons déjà ajouté quelques alias pour des commandes que nous n&#8217;avons pas encore abordé. La commande <code>git branch</code> va bientôt être abordée. et la commande <code>git cat-file</code> est utile pour explorer git, ce que nous verrons dans un petit moment.</p>
 <h2>Alias de la ligne de commande (optionnel) <em>04</em></h2>
-<p class="note"><strong>Note:</strong> Cette section est pour les utilisateurs qui utilisent une ligne de commande de type posix. Les utilisateurs Windows et utilisateurs n&#8217;utilisant pas une ligne de commande non-posix peuvent passer à la prochaine partie.</p>
+<p class="note"><strong>Note:</strong> Cette section est pour les utilisateurs qui utilisent une ligne de commande de type posix. Les utilisateurs Windows et ceux utilisant une ligne de commande non-posix peuvent passer à la prochaine partie.</p>
 <p>Si votre ligne de commande supporte les alias et les raccourcis, ensuite vous pouvez utiliser des alias à ce niveau également. Voici ceux que j&#8217;utilise:</p>
-<h4>File: <em>.profile</em></h4>
+<h4>Fichier: <em>.profile</em></h4>
 <pre class="file">alias gs='git status '
 alias ga='git add '
 alias gb='git branch '
@@ -102,9 +90,9 @@ alias gx='gitx --all'
 alias got='git '
 alias get='git '
 </pre>
-<p>L&#8217;abbréviation <code>go</code> pour <code>git checkout</code> est particulièrement joli. Cela me permet de taper:</p>
+<p>L&#8217;abbréviation <code>go</code> pour <code>git checkout</code> est particulièrement jolie. Cela me permet de taper:</p>
 <pre class="instructions">go &lt;branch&gt;</pre>
-<p>pour récupérer une branche particulière.</p>
+<p>Pour récupérer une branche particulière.</p>
 <p>Et oui, je tape par erreur <code>git</code> comme <code>get</code> ou <code>got</code> suffisamment souvent pour créer l&#8217;alias pour eux.</p>
   </div>
 
@@ -113,81 +101,65 @@ alias get='git '
   <div id="show_bookmarks"></div>
   <div id="no_bookmarks"></div>
   <ul>
-    <li data-lab-id="0"><a href="index.html"><span>&nbsp;</span>Couverture de page d'accueil</a></li>
-          <li data-lab-id="1"><a href="lab_01.html"><span>1:</span> Configuration</a></li>
-          <li data-lab-id="2"><a href="lab_02.html"><span>2:</span> Configuration supplémentaire</a></li>
-          <li data-lab-id="3"><a href="lab_03.html"><span>3:</span> Créer un projet</a></li>
-          <li data-lab-id="4"><a href="lab_04.html"><span>4:</span> Vérifier le status</a></li>
-          <li data-lab-id="5"><a href="lab_05.html"><span>5:</span> Effectuer des changements</a></li>
-          <li data-lab-id="6"><a href="lab_06.html"><span>6:</span> Déclarer les changements</a></li>
-          <li data-lab-id="7"><a href="lab_07.html"><span>7:</span> Déclarer et commiter</a></li>
-          <li data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiter les changements</a></li>
-          <li data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changements, pas fichiers</a></li>
-          <li data-lab-id="10"><a href="lab_10.html"><span>10:</span> Historique</a></li>
-          <li data-lab-id="11"><a href="lab_11.html"><span>11:</span> Alias</a></li>
-          <li data-lab-id="12"><a href="lab_12.html"><span>12:</span> Obtenir de vieille versions</a></li>
-          <li data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagger des versions</a></li>
-          <li data-lab-id="14"><a href="lab_14.html"><span>14:</span> Annuler les changements locaux (avant les déclarations)</a></li>
-          <li data-lab-id="15"><a href="lab_15.html"><span>15:</span> Annuler les déclarations de fichiers changés (avant de commiter)</a></li>
-          <li data-lab-id="16"><a href="lab_16.html"><span>16:</span> Annuler les changements déjà commités</a></li>
-          <li data-lab-id="17"><a href="lab_17.html"><span>17:</span> Enlever des commits d'une branche</a></li>
-          <li data-lab-id="18"><a href="lab_18.html"><span>18:</span> Remove the oops tag</a></li>
-          <li data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amending Commits</a></li>
-          <li data-lab-id="20"><a href="lab_20.html"><span>20:</span> Moving Files</a></li>
-          <li data-lab-id="21"><a href="lab_21.html"><span>21:</span> More Structure</a></li>
-          <li data-lab-id="22"><a href="lab_22.html"><span>22:</span> Git Internals: The .git directory</a></li>
-          <li data-lab-id="23"><a href="lab_23.html"><span>23:</span> Git Internals: Working directly with Git Objects</a></li>
-          <li data-lab-id="24"><a href="lab_24.html"><span>24:</span> Creating a Branch</a></li>
-          <li data-lab-id="25"><a href="lab_25.html"><span>25:</span> Navigating Branches</a></li>
-          <li data-lab-id="26"><a href="lab_26.html"><span>26:</span> Changes in Master</a></li>
-          <li data-lab-id="27"><a href="lab_27.html"><span>27:</span> Viewing Diverging Branches</a></li>
-          <li data-lab-id="28"><a href="lab_28.html"><span>28:</span> Merging</a></li>
-          <li data-lab-id="29"><a href="lab_29.html"><span>29:</span> Creating a Conflict</a></li>
-          <li data-lab-id="30"><a href="lab_30.html"><span>30:</span> Resolving Conflicts</a></li>
-          <li data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebasing VS Merging</a></li>
-          <li data-lab-id="32"><a href="lab_32.html"><span>32:</span> Resetting the Greet Branch</a></li>
-          <li data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
-          <li data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
-          <li data-lab-id="35"><a href="lab_35.html"><span>35:</span> Merging Back to Master</a></li>
-          <li data-lab-id="36"><a href="lab_36.html"><span>36:</span> Multiple Repositories</a></li>
-          <li data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloning Repositories</a></li>
-          <li data-lab-id="38"><a href="lab_38.html"><span>38:</span> Review the Cloned Repository</a></li>
-          <li data-lab-id="39"><a href="lab_39.html"><span>39:</span> What is Origin?</a></li>
-          <li data-lab-id="40"><a href="lab_40.html"><span>40:</span> Remote Branches</a></li>
-          <li data-lab-id="41"><a href="lab_41.html"><span>41:</span> Change the Original Repository</a></li>
-          <li data-lab-id="42"><a href="lab_42.html"><span>42:</span> Fetching Changes</a></li>
-          <li data-lab-id="43"><a href="lab_43.html"><span>43:</span> Merging Pulled Changes</a></li>
-          <li data-lab-id="44"><a href="lab_44.html"><span>44:</span> Pulling Changes</a></li>
-          <li data-lab-id="45"><a href="lab_45.html"><span>45:</span> Adding a Tracking Branch</a></li>
-          <li data-lab-id="46"><a href="lab_46.html"><span>46:</span> Bare Repositories</a></li>
-          <li data-lab-id="47"><a href="lab_47.html"><span>47:</span> Adding a Remote Repository</a></li>
-          <li data-lab-id="48"><a href="lab_48.html"><span>48:</span> Pushing a Change</a></li>
-          <li data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
-          <li data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
-          <li data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
-          <li data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>
-          <li data-lab-id="53"><a href="lab_53.html"><span>53:</span> Merci</a></li>
+    <li id="lab_0_link"><a href="index.html"><span>&nbsp;</span>Page d'accueil</a></li>
+          <li id="lab_1_link" data-lab-id="1"><a href="lab_01.html"><span>1:</span> Configuration</a></li>
+          <li id="lab_2_link" data-lab-id="2"><a href="lab_02.html"><span>2:</span> Configuration supplémentaire</a></li>
+          <li id="lab_3_link" data-lab-id="3"><a href="lab_03.html"><span>3:</span> Créer un projet</a></li>
+          <li id="lab_4_link" data-lab-id="4"><a href="lab_04.html"><span>4:</span> Vérifier le status</a></li>
+          <li id="lab_5_link" data-lab-id="5"><a href="lab_05.html"><span>5:</span> Effectuer des changements</a></li>
+          <li id="lab_6_link" data-lab-id="6"><a href="lab_06.html"><span>6:</span> Déclarer les changements</a></li>
+          <li id="lab_7_link" data-lab-id="7"><a href="lab_07.html"><span>7:</span> Déclarer et commiter</a></li>
+          <li id="lab_8_link" data-lab-id="8"><a href="lab_08.html"><span>8:</span> Commiter les changements</a></li>
+          <li id="lab_9_link" data-lab-id="9"><a href="lab_09.html"><span>9:</span> Changements, pas fichiers</a></li>
+          <li id="lab_10_link" data-lab-id="10"><a href="lab_10.html"><span>10:</span> Historique</a></li>
+          <li id="lab_11_link" data-lab-id="11"><a href="lab_11.html"><span>11:</span> Alias</a></li>
+          <li id="lab_12_link" data-lab-id="12"><a href="lab_12.html"><span>12:</span> Obtenir de vieille versions</a></li>
+          <li id="lab_13_link" data-lab-id="13"><a href="lab_13.html"><span>13:</span> Tagger des versions</a></li>
+          <li id="lab_14_link" data-lab-id="14"><a href="lab_14.html"><span>14:</span> Annuler les changements locaux (avant les déclarations)</a></li>
+          <li id="lab_15_link" data-lab-id="15"><a href="lab_15.html"><span>15:</span> Annuler les déclarations de fichiers changés (avant de commiter)</a></li>
+          <li id="lab_16_link" data-lab-id="16"><a href="lab_16.html"><span>16:</span> Annuler les changements déjà commités</a></li>
+          <li id="lab_17_link" data-lab-id="17"><a href="lab_17.html"><span>17:</span> Enlever des commits d'une branche</a></li>
+          <li id="lab_18_link" data-lab-id="18"><a href="lab_18.html"><span>18:</span> Enlever le tag oups</a></li>
+          <li id="lab_19_link" data-lab-id="19"><a href="lab_19.html"><span>19:</span> Amender les commits</a></li>
+          <li id="lab_20_link" data-lab-id="20"><a href="lab_20.html"><span>20:</span> Déplacer les fichiers</a></li>
+          <li id="lab_21_link" data-lab-id="21"><a href="lab_21.html"><span>21:</span> Plus de structuration</a></li>
+          <li id="lab_22_link" data-lab-id="22"><a href="lab_22.html"><span>22:</span> Fonctionnement interne de Git: le répertoire .git</a></li>
+          <li id="lab_23_link" data-lab-id="23"><a href="lab_23.html"><span>23:</span> Fonctionnement interne de Git: travailler directement avec les objets Git</a></li>
+          <li id="lab_24_link" data-lab-id="24"><a href="lab_24.html"><span>24:</span> Créer une branche</a></li>
+          <li id="lab_25_link" data-lab-id="25"><a href="lab_25.html"><span>25:</span> Naviguer dans les branches</a></li>
+          <li id="lab_26_link" data-lab-id="26"><a href="lab_26.html"><span>26:</span> Changements dans Master</a></li>
+          <li id="lab_27_link" data-lab-id="27"><a href="lab_27.html"><span>27:</span> Visualiser les branches qui divergent</a></li>
+          <li id="lab_28_link" data-lab-id="28"><a href="lab_28.html"><span>28:</span> Fusion</a></li>
+          <li id="lab_29_link" data-lab-id="29"><a href="lab_29.html"><span>29:</span> Création d'un conflit</a></li>
+          <li id="lab_30_link" data-lab-id="30"><a href="lab_30.html"><span>30:</span> Résolution des conflits</a></li>
+          <li id="lab_31_link" data-lab-id="31"><a href="lab_31.html"><span>31:</span> Rebase VS Fusion (merge)</a></li>
+          <li id="lab_32_link" data-lab-id="32"><a href="lab_32.html"><span>32:</span> Réinitialiser la branche Saluer</a></li>
+          <li id="lab_33_link" data-lab-id="33"><a href="lab_33.html"><span>33:</span> Resetting the Master Branch</a></li>
+          <li id="lab_34_link" data-lab-id="34"><a href="lab_34.html"><span>34:</span> Rebasing</a></li>
+          <li id="lab_35_link" data-lab-id="35"><a href="lab_35.html"><span>35:</span> Fusionner dans la branche master</a></li>
+          <li id="lab_36_link" data-lab-id="36"><a href="lab_36.html"><span>36:</span> Dépôts multiples</a></li>
+          <li id="lab_37_link" data-lab-id="37"><a href="lab_37.html"><span>37:</span> Cloner des dépôts</a></li>
+          <li id="lab_38_link" data-lab-id="38"><a href="lab_38.html"><span>38:</span> Examiner le dépôt cloné</a></li>
+          <li id="lab_39_link" data-lab-id="39"><a href="lab_39.html"><span>39:</span> Qu'est ce qu'origin?</a></li>
+          <li id="lab_40_link" data-lab-id="40"><a href="lab_40.html"><span>40:</span> Branches distantes</a></li>
+          <li id="lab_41_link" data-lab-id="41"><a href="lab_41.html"><span>41:</span> Changer le dépôt original</a></li>
+          <li id="lab_42_link" data-lab-id="42"><a href="lab_42.html"><span>42:</span> Rapporter (fetch) les changements</a></li>
+          <li id="lab_43_link" data-lab-id="43"><a href="lab_43.html"><span>43:</span> Fusionner les changements récupérés</a></li>
+          <li id="lab_44_link" data-lab-id="44"><a href="lab_44.html"><span>44:</span> "Tirer" (pull) les changements</a></li>
+          <li id="lab_45_link" data-lab-id="45"><a href="lab_45.html"><span>45:</span> Ajouter une branche pour le suivi</a></li>
+          <li id="lab_46_link" data-lab-id="46"><a href="lab_46.html"><span>46:</span> Dépôts dit "nus" (bare)</a></li>
+          <li id="lab_47_link" data-lab-id="47"><a href="lab_47.html"><span>47:</span> Ajouter un dépôt distant</a></li>
+          <li id="lab_48_link" data-lab-id="48"><a href="lab_48.html"><span>48:</span> Envoyer un changement</a></li>
+          <li id="lab_49_link" data-lab-id="49"><a href="lab_49.html"><span>49:</span> Récupérer les changements partagés</a></li>
+          <li id="lab_50_link" data-lab-id="50"><a href="lab_50.html"><span>50:</span> Héberger vos dépôts Git</a></li>
+          <li id="lab_51_link" data-lab-id="51"><a href="lab_51.html"><span>51:</span> Partager des dépôts</a></li>
+          <li id="lab_52_link" data-lab-id="52"><a href="lab_52.html"><span>52:</span> Sujets avancés / futurs</a></li>
+          <li id="lab_53_link" data-lab-id="53"><a href="lab_53.html"><span>53:</span> Merci</a></li>
       </ul>
 </div>
 
 
-
-  <footer id="footer">
-    <nav>
-      <ul>
-  <li class="arrow next">
-          <a href="lab_12.html#main_content">Suivant</a>
-      </li>
-  <li class="arrow previous">
-          <a href="lab_10.html#main_content">Précédent</a>
-      </li>
-  <li class="index_button"><a href="#">Index</a></li>
-</ul>
-
-
-    </nav>
-    <a href="http://edgecase.com" target="_blank" id="edgecase_link_small">EdgeCase</a>
-  </footer>
+  <div id="cover"></div>
 </body>
 </html>
 
