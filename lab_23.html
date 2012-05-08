@@ -64,7 +64,7 @@ le dépôt</li>
 <p>Cela devrait montrer le dernier commit fait dans le dépôt. Le hash SHA1 sur votre système est probablement différent de celui qui est chez nous, mais vous devriez voir quelque chose de ce type.</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --max-count=1
-* 50288bc 2012-05-07 | Ajout d'un Rakefile (HEAD, master) [Jim Weirich]</pre>
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile (HEAD, master) [Jim Weirich]</pre>
 <h2>Extraire les infos du dernier commit <em>02</em></h2>
 <p>Utiliser le hash SHA1 depuis le commit listé ci-dessus &#8230;</p>
 <h4>Exécuter:</h4>
@@ -72,13 +72,13 @@ le dépôt</li>
 git cat-file -p &lt;hash&gt;</pre>
 <p>Voici notre sortie &#8230;</p>
 <h4>En sortie:</h4>
-<pre class="sample">$ git cat-file -t 50288bc
+<pre class="sample">$ git cat-file -t 40fb2cc
 commit
-$ git cat-file -p 50288bc
+$ git cat-file -p 40fb2cc
 tree 81ce6541c9dfbf939e753a1d4b7f8544fdf4c10d
-parent fdbaff516648118f065ac92680c38dfc815b1664
-author Jim Weirich &lt;jim (at) edgecase.com&gt; 1336344673 +0200
-committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1336344673 +0200
+parent 7ce5d641a3295a5d53b722e58fae4dff9642bca2
+author Jim Weirich &lt;jim (at) edgecase.com&gt; 1336505357 +0200
+committer Jim Weirich &lt;jim (at) edgecase.com&gt; 1336505357 +0200
 
 Ajout d'un Rakefile
 </pre>

@@ -73,12 +73,12 @@ correspondre au commit spécifié</li>
 <pre class="instructions">git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist
-* 21a19c5 2012-05-07 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
-* 96001a0 2012-05-07 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* a652a85 2012-05-08 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
+* dd8c230 2012-05-08 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Nous voyons que nous avons un commit &#8220;Oups&#8221; et un commit &#8220;Annuler Oups&#8221; comme deux derniers commits fait dans cette branche. Maintenant enlevons-les en utilisant reset.</p>
 <h2>En premier, marquer cette branche <em>03</em></h2>
 <p>mais avant d&#8217;enlever les commits, marquons le dernier commit avec un tag pour que nous puissions encore le retrouver.</p>
@@ -91,12 +91,12 @@ correspondre au commit spécifié</li>
 git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git reset --hard v1
-HEAD is now at 392ee14 Ajout d'un commentaire
+HEAD is now at 167ff0c Ajout d'un commentaire
 $ git hist
-* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Notre branche master branch pointe maintenant vers le commit v1 et le commit Oups et le commit Annuler Oups nes ont plus dans la branche. Le paramètre <code>--hard</code> indique que le répertoire de travail devrait être mis à jour pour être consistant avec le head de la nouvelle branche.</p>
 <h2>Rien n&#8217;est jamais perdu <em>05</em></h2>
 <p>Mais qu&#8217;est il arrivé aux mauvais commits? En fait les commits sont toujours dans le dépôt. D&#8217;ailleurs, nous pouvons toujours les référencer. Rappelez vous qu&#8217;au début de cette partie, nous avons taggé le commit d&#8217;annulation avec le tag &#8220;oups&#8221;. Regardons <em>tous</em> les commits.</p>
@@ -104,12 +104,12 @@ $ git hist
 <pre class="instructions">git hist --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --all
-* 21a19c5 2012-05-07 | Revert "Oups, nous  ne voulions pas ce commit" (oups) [Jim Weirich]
-* 96001a0 2012-05-07 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* a652a85 2012-05-08 | Revert "Oups, nous  ne voulions pas ce commit" (oups) [Jim Weirich]
+* dd8c230 2012-05-08 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (HEAD, v1, master) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Ici nous voyons que les mauvais commits n&#8217;ont pas disparus. Ils sont toujours dans le dépôt. C&#8217;est juste qu&#8217;ils ne sont plus listés dans la branche master. Si nous ne les avions pas taggés, ils seraient toujours dans le dépôt, mais il n&#8217;y aurait plus moyen de les référencer autrement que par leur nom de hash. Les commits non référencés restent dans le dépôt jusqu&#8217;à ce que le système lance l&#8217;utilitaire de nettoyage mémoire.</p>
 <h2>Les dangers du reset <em>06</em></h2>
 <p>Les réinitialisations sur les branches locales sont généralement sûres. N&#8217;importe quel accident peut être généralement récupéré en faisant un reset avec le commit désiré.</p>

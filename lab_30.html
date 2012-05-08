@@ -89,7 +89,7 @@ puts "Bonjour, #{mon_nom}!"
 </pre>
 <p>La première section est la version dans le head de la branche courante (saluer). La deuxième section est la version dans la branche master.</p>
 <h2>Corriger le conflit <em>02</em></h2>
-<p>Vous devez manuellement résoudre le conflit. Modifier <code>lib/bonjour.rb</code> pour être comme suivant.</p>
+<p>Vous devez manuellement résoudre le conflit. Modifier <code>lib/bonjour.rb</code> pour qu&#8217;il soit comme ci-dessous.</p>
 <h4>Fichier: <em>lib/bonjour.rb</em></h4>
 <pre class="file">require 'faireunsalut'
 
@@ -106,7 +106,7 @@ git commit -m "La fusion depuis master corrige le conflit"</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git add lib/bonjour.rb
 $ git commit -m "La fusion depuis master corrige le conflit"
-[saluer a4aa958] La fusion depuis master corrige le conflit
+[saluer 0e0af87] La fusion depuis master corrige le conflit
 </pre>
 <h2>Fusion avancée <em>04</em></h2>
 <p>Git ne propose aucun outil graphique de fusion, mais il fonctionnera très bien avec n&#8217;importe quel outil tiers de fusion que vous souhaiteriez utiliser. Voir <a href="http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red">http://onestepback.org/index.cgi/Tech/Git/UsingP4MergeWithGit.red</a> pour une description de l&#8217;utilisation de l&#8217;outil de fusion Perforce avec git.</p>

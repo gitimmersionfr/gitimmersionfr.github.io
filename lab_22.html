@@ -70,8 +70,8 @@ COMMIT_EDITMSG	description  hooks  info   objects  refs
 <pre class="instructions">ls -C .git/objects</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ ls -C .git/objects
-08  11	1a  26	2f  50	65  83	96  a1	a5  d4	f5  info
-0e  19	21  29	39  5a	81  87	9d  a4	a8  e7	fd  pack
+08  16	1a  29	35  5a	7c  81	87  a3	a5  a8	dd  f4	  pack
+11  19	26  2f	40  65	7f  83	a1  a4	a6  d4	e7  info
 </pre>
 <p>Vous devriez voir un ensemble de répertoires avec des noms de 2 lettres. Les noms des répertoires sont les deux premières lettres du hash sha1 de l&#8217;objet stocké dans git.</p>
 <h2>Approfondissement sur le magasin d&#8217;objets <em>03</em></h2>
@@ -113,7 +113,7 @@ $ ls .git/refs/tags
 v1
 v1-beta
 $ cat .git/refs/tags/v1
-392ee14d697885141b8056a4b03e901cf617e997
+167ff0ce951c415904d95bbc2e95de9438bc7aa6
 </pre>
 <p>Vous devriez reconnaître les fichiers dans le sous-répertoire des tags. Chaque fichier correspond à un tag que vous avez créé avec la commande <code>git tag</code> un peu plus tôt. Son contenu est juste le hash du commit associé au tag.</p>
 <p>Le répertoire heads est similaire, mais est utilisé par les branches plutôt que les tags. Nous avons seulement une branche pour le moment, ainsi tout ce que verrez dans ce répertoire est master.</p>

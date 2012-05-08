@@ -63,23 +63,23 @@ git hist --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git fetch
 From /home/thomas/git/git2/git_immersion/auto/bonjour
-   c8f930f..bef3b12  master     -&gt; origin/master
+   55aa3f4..433155f  master     -&gt; origin/master
 $ git hist --all
-* bef3b12 2012-05-07 | Changement de LISEZMOI dans le dépôt original (origin/master, origin/HEAD) [Jim Weirich]
-* c8f930f 2012-05-07 | Rakefile mis à jour (HEAD, origin/saluer, master) [Jim Weirich]
-* 4a01131 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
-* edbb2f8 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
-* fe9164f 2012-05-07 | Ajout d'un LISEZMOI [Jim Weirich]
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 433155f 2012-05-08 | Changement de LISEZMOI dans le dépôt original (origin/master, origin/HEAD) [Jim Weirich]
+* 55aa3f4 2012-05-08 | Rakefile mis à jour (HEAD, origin/saluer, master) [Jim Weirich]
+* 45a2e7a 2012-05-08 | bonjour utilise Faireunsalut [Jim Weirich]
+* 011229b 2012-05-08 | Ajout de la classe Faireunsalut [Jim Weirich]
+* 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI [Jim Weirich]
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Actuellement le dépôt a tous les commits provenant de celui original, mais ils ne sont pas intégrés dans les branches locales du dépôt cloné.</p>
-<p>Trouver le commit &#8220;Changement de <span class="caps">LISEZMOI</span> dans le dépôt original&#8221; dans l&#8217;historique ci-dessus. Notez que le commit inclut &#8220;origin/master&#8221; et &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
-<p>Maintenant regardez dans le commit &#8220;Updated Rakefile&#8221;. Vous allez voir que sa branche locale master pointe vers ce commit, pas vers le nouveau commit que nous venons juste de rapporter.</p>
+<p>Trouver le commit &#8220;Changement de <span class="caps">LISEZMOI</span> dans le dépôt original&#8221; dans l&#8217;historique ci-dessus. Noter que le commit inclut &#8220;origin/master&#8221; et &#8220;origin/<span class="caps">HEAD</span>&#8221;.</p>
+<p>Maintenant regarder dans le commit &#8220;Rakefile mis à jour&#8221;. Vous allez voir que sa branche locale master pointe vers ce commit, pas vers le nouveau commit que nous venons juste de rapporter.</p>
 <p>Le résultat de ceci est que la commande &#8220;git fetch&#8221; va maintenant rapporter les nouveaux commits du dépôt distant, mais qu&#8217;elle ne va pas fusionner ces commits dans les branches locales.</p>
 <h2>Vérifier le fichier <span class="caps">LISEZMOI</span> <em>01</em></h2>
 <p>Nous pouvons démontrer que le <span class="caps">LISEZMOI</span> cloné est inchangé.</p>

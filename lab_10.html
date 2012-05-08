@@ -61,27 +61,27 @@
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log
-commit 392ee14d697885141b8056a4b03e901cf617e997
+commit 167ff0ce951c415904d95bbc2e95de9438bc7aa6
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 7 00:51:12 2012 +0200
+Date:   Tue May 8 21:29:16 2012 +0200
 
     Ajout d'un commentaire
 
-commit a81dfe7d7b0fb603dc1d341ef9570a995453b63b
+commit a33b91a4235c3f1c94f0289f2a8efd40609a2153
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 7 00:51:12 2012 +0200
+Date:   Tue May 8 21:29:16 2012 +0200
 
     Ajouter une valeur par défaut
 
-commit 9de1147332fb45c8e5d2096bafe0968eae2edbbe
+commit f45bf4e0afafabe9697edb903b421bc755314633
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 7 00:51:12 2012 +0200
+Date:   Tue May 8 21:29:16 2012 +0200
 
     Utilisation de ARGV
 
-commit f5556a9336f9e871d07dad35379837b19eb28259
+commit a8bb23a22157648dc59b830c172df3586e3452aa
 Author: Jim Weirich &lt;jim (at) edgecase.com&gt;
-Date:   Mon May 7 00:51:12 2012 +0200
+Date:   Tue May 8 21:29:16 2012 +0200
 
     Mon premier commit
 </pre>
@@ -93,10 +93,10 @@ Date:   Mon May 7 00:51:12 2012 +0200
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log --pretty=oneline
-392ee14d697885141b8056a4b03e901cf617e997 Ajout d'un commentaire
-a81dfe7d7b0fb603dc1d341ef9570a995453b63b Ajouter une valeur par défaut
-9de1147332fb45c8e5d2096bafe0968eae2edbbe Utilisation de ARGV
-f5556a9336f9e871d07dad35379837b19eb28259 Mon premier commit
+167ff0ce951c415904d95bbc2e95de9438bc7aa6 Ajout d'un commentaire
+a33b91a4235c3f1c94f0289f2a8efd40609a2153 Ajouter une valeur par défaut
+f45bf4e0afafabe9697edb903b421bc755314633 Utilisation de ARGV
+a8bb23a22157648dc59b830c172df3586e3452aa Mon premier commit
 </pre>
 <h2>Contrôler quelles entrées sont affichées <em>02</em></h2>
 <p>Il y a beaucoup d&#8217;options pour sélectionner quelles entrées sont affichées dans le log. Jouez avec les commandes suivantes:</p>
@@ -116,10 +116,10 @@ git log --pretty=oneline --all</pre>
 <p>Cela ressemble à:</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
-* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Regardons cette ligne dans le détail:</p>
 <ul>
 	<li><code>--pretty="..."</code> définit le format de sortie.</li>

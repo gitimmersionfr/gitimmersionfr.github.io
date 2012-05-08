@@ -78,7 +78,7 @@ git commit -m "Oups, nous  ne voulions pas ce commit"</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git revert HEAD --no-edit
 Finished one revert.
-[master 21a19c5] Revert "Oups, nous  ne voulions pas ce commit"
+[master a652a85] Revert "Oups, nous  ne voulions pas ce commit"
  1 files changed, 1 insertions(+), 1 deletions(-)
 </pre>
 <p>Comme nous étions en train d&#8217;annuler le dernier commit que nous avions fait, nous avons été capable d&#8217;utiliser <code>HEAD</code> comme argument pour annuler. Nous pouvons annuler n&#8217;importe quel commit de manière arbitraire plus ancien dans l&#8217;historique en spécifiant simplement la valeur de son hash.</p>
@@ -89,12 +89,12 @@ Finished one revert.
 <pre class="instructions">git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist
-* 21a19c5 2012-05-07 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
-* 96001a0 2012-05-07 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* a652a85 2012-05-08 | Revert "Oups, nous  ne voulions pas ce commit" (HEAD, master) [Jim Weirich]
+* dd8c230 2012-05-08 | Oups, nous  ne voulions pas ce commit [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Cette technique fonctionnera avec n&#8217;importe quel commit (même si vous allez peut être devoir résoudre des conflits). C&#8217;est sûr pour être utilisé même sur les branches qui sont partagées sur des dépôts distants.</p>
 <h2>Quoi de plus <em>05</em></h2>
 <p>Maintenant, allons regarder une technique qui peut être utilisée pour enlever les commits les plus récents de l&#8217;historique du dépôt.</p>

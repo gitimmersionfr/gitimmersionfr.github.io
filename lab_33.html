@@ -56,40 +56,40 @@
 	<li>Réinitialiser la branche master au point avant le commit conflictuel.</li>
 </ul>
 <h2>Réinitialiser la branche master <em>01</em></h2>
-<p>Quand nous avons ajouté le mode interactif dans la branche master, nous avons fait un changement qui rentre en conflit avec les changements dans la branche saluer. &#8220;Rembobinons&#8221; la branche master au point avantle changement conflictuel. Cela va nous permettre de faire une démonstration de la commande rebase sans s&#8217;inquiéter des conflits.</p>
+<p>Quand nous avons ajouté le mode interactif dans la branche master, nous avons fait un changement qui rentre en conflit avec les changements dans la branche saluer. &#8220;Rembobinons&#8221; la branche master au point avant le changement conflictuel. Cela va nous permettre de faire une démonstration de la commande rebase sans s&#8217;inquièter des conflits.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git checkout master
 git hist</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist
-* 2bd7c9b 2012-05-07 | Rendre interactif (HEAD, master) [Jim Weirich]
-* fe9164f 2012-05-07 | Ajout d'un LISEZMOI [Jim Weirich]
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* f289457 2012-05-08 | Rendre interactif (HEAD, master) [Jim Weirich]
+* 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI [Jim Weirich]
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Le commit &#8216;Ajout d&#8217;un LISEZMOI&#8217; est celui qui est directement avant le mode interactif conflictuel. Nous allons réinitialiser la branche master au commit &#8216;Ajout d&#8217;un LISEZMOI&#8217;.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;
 git hist --all</pre>
-<p>Examiner le log. Cela devrait ressembler comme si on avait rembobiné le dépôt dans le temps au point avant la fusion de quoi que ce soit.</p>
+<p>Examiner le log. Cela devrait ressembler comme si on avait rembobiné le dépôt dans le temps, au point avant la fusion de quoi que ce soit.</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --all
-* fe9164f 2012-05-07 | Ajout d'un LISEZMOI (HEAD, master) [Jim Weirich]
-| * 43ab17e 2012-05-07 | Rakefile mis à jour (saluer) [Jim Weirich]
-| * 868fc3c 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
-| * d9d726a 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
+* 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI (HEAD, master) [Jim Weirich]
+| * dcc1252 2012-05-08 | Rakefile mis à jour (saluer) [Jim Weirich]
+| * cbe47f8 2012-05-08 | bonjour utilise Faireunsalut [Jim Weirich]
+| * 9101cb4 2012-05-08 | Ajout de la classe Faireunsalut [Jim Weirich]
 |/  
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">

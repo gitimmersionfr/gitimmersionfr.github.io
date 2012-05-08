@@ -63,10 +63,10 @@ de travail.</li>
 <p class="note"><strong>Note:</strong> Vous vous rappelez avoir défini <code>hist</code> dans votre fichier <code>.gitconfig</code>, n&#8217;est ce pas? Si ce n&#8217;est pas le cas, revoyez le tutoriel sur les alias.</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist
-* 392ee14 2012-05-07 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (HEAD, master) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Examiner la sortie du log et trouver le hash pour le premier commit. Cela doit être la dernière ligne de la sortie de <code>git hist</code>. Utiliser le code hash (les 7 premiers caractères sont suffisants) dans la commande ci-dessous. Ensuite, vérifier le contenu du fichier bonjour.rb.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git checkout &lt;hash&gt;
@@ -75,8 +75,8 @@ cat bonjour.rb</pre>
 <p class="note"><strong>Note:</strong> De nombreuses commandes dépendent des valeurs de hash dans le dépôt. Comme vos valeurs de hash vont changer des miennes, chaque fois que vous voyez quelque chose comme &lt;hash&gt; ou &lt;treehash&gt; dans la commande, remplacer la valeur par votre propre valeur de dépôt.</p>
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
-<pre class="sample">$ git checkout f5556a9
-Note: checking out 'f5556a9'.
+<pre class="sample">$ git checkout a8bb23a
+Note: checking out 'a8bb23a'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -87,7 +87,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at f5556a9... Mon premier commit
+HEAD is now at a8bb23a... Mon premier commit
 $ cat bonjour.rb
 puts "Bonjour, Monde"
 </pre>
@@ -100,7 +100,7 @@ cat bonjour.rb</pre>
 <p>Vous devriez voir &#8230;</p>
 <h4>En sortie:</h4>
 <pre class="sample">$ git checkout master
-Previous HEAD position was f5556a9... Mon premier commit
+Previous HEAD position was a8bb23a... Mon premier commit
 Switched to branch 'master'
 $ cat bonjour.rb
 # L'argument par défaut est Monde

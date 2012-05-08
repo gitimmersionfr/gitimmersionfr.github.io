@@ -79,7 +79,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b new_branch_name
 
-HEAD is now at a81dfe7... Ajouter une valeur par défaut
+HEAD is now at a33b91a... Ajouter une valeur par défaut
 $ cat bonjour.rb
 nom = ARGV.first || "Monde"
 
@@ -95,11 +95,11 @@ puts "Bonjour, #{nom}!"
 git checkout v1-beta</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git checkout v1
-Previous HEAD position was a81dfe7... Ajouter une valeur par défaut
-HEAD is now at 392ee14... Ajout d'un commentaire
+Previous HEAD position was a33b91a... Ajouter une valeur par défaut
+HEAD is now at 167ff0c... Ajout d'un commentaire
 $ git checkout v1-beta
-Previous HEAD position was 392ee14... Ajout d'un commentaire
-HEAD is now at a81dfe7... Ajouter une valeur par défaut
+Previous HEAD position was 167ff0c... Ajout d'un commentaire
+HEAD is now at a33b91a... Ajouter une valeur par défaut
 </pre>
 <h2>Voir les tags en utilisant la commande <code>tag</code> <em>04</em></h2>
 <p>Vous pouvez voir quels tags sont disponibles en utilisant la commande <code>git tag</code>.</p>
@@ -116,10 +116,10 @@ v1-beta
 <pre class="instructions">git hist master --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist master --all
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1, master) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (HEAD, v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1, master) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (HEAD, v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>Vous pouvez voir les deux tags (<code>v1</code> et <code>v1-beta</code>) listés dans la sortie de log, avec à côté le nom de la branche (<code>master</code>). Aussi, <code>HEAD</code> vous montre le commit qui est actuellement utilisé (qui est le <code>v1-beta</code> pour le moment).</p>
   </div>
 

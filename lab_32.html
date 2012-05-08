@@ -53,10 +53,10 @@
     <h1 class="lab_title"><em>lab 32</em>  Réinitialiser la branche Saluer</h1>
 <h3>Buts</h3>
 <ul>
-	<li>Réinitialiser la branche saluer au point vant la première fusion.</li>
+	<li>Réinitialiser la branche saluer au point avant la première fusion.</li>
 </ul>
 <h2>Réinitialiser la branche saluer <em>01</em></h2>
-<p>Revenons dans le temps sur la branche saluer à la phase <em>avant</em> que nous fusionnons master dedans. Nous pouvons <strong>réintialiser</strong> une branche à n&#8217;importe quel commit souhaité. Essentiellement, c&#8217;est une modification du pointeur de la branche pour qu&#8217;il pointe n&#8217;importe où dans l&#8217;arbre de commit.</p>
+<p>Revenons dans le temps sur la branche saluer à la phase <em>avant</em> que nous fusionnions master dedans. Nous pouvons <strong>réintialiser</strong> une branche à n&#8217;importe quel commit souhaité. Essentiellement, c&#8217;est une modification du pointeur de la branche pour qu&#8217;il pointe n&#8217;importe où dans l&#8217;arbre de commit.</p>
 <p>Dans ce cas, nous voulons remettre saluer au point avant le merge avec master. Nous devons trouver le dernier commit avant la fusion.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git checkout saluer
@@ -65,30 +65,30 @@ git hist</pre>
 <pre class="sample">$ git checkout saluer
 Already on 'saluer'
 $ git hist
-*   a4aa958 2012-05-07 | La fusion depuis master corrige le conflit (HEAD, saluer) [Jim Weirich]
+*   0e0af87 2012-05-08 | La fusion depuis master corrige le conflit (HEAD, saluer) [Jim Weirich]
 |\  
-| * 2bd7c9b 2012-05-07 | Rendre interactif (master) [Jim Weirich]
-* |   197c954 2012-05-07 | Merge branch 'master' into saluer [Jim Weirich]
+| * f289457 2012-05-08 | Rendre interactif (master) [Jim Weirich]
+* |   244cb3f 2012-05-08 | Merge branch 'master' into saluer [Jim Weirich]
 |\ \  
 | |/  
-| * fe9164f 2012-05-07 | Ajout d'un LISEZMOI [Jim Weirich]
-* | 43ab17e 2012-05-07 | Rakefile mis à jour [Jim Weirich]
-* | 868fc3c 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
-* | d9d726a 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
+| * 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI [Jim Weirich]
+* | dcc1252 2012-05-08 | Rakefile mis à jour [Jim Weirich]
+* | cbe47f8 2012-05-08 | bonjour utilise Faireunsalut [Jim Weirich]
+* | 9101cb4 2012-05-08 | Ajout de la classe Faireunsalut [Jim Weirich]
 |/  
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <p>C&#8217;est un peu dur à lire, mais en regardant dans les données, nous voyons que le commit &#8220;Rakefile mis à jour&#8221; était le dernier commit sur la branche saluer avant la fusion. Réinitialisons la branche saluer à ce commit.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git reset --hard &lt;hash&gt;</pre>
 <h4>En sortie:</h4>
-<pre class="sample">$ git reset --hard 43ab17e
-HEAD is now at 43ab17e Rakefile mis à jour
+<pre class="sample">$ git reset --hard dcc1252
+HEAD is now at dcc1252 Rakefile mis à jour
 </pre>
 <h2>Vérifier la branche. <em>02</em></h2>
 <p>Regardez dans le log de la branche saluer. Nous n&#8217;avons plus les commits de fusion dans l&#8217;historique.</p>
@@ -96,19 +96,19 @@ HEAD is now at 43ab17e Rakefile mis à jour
 <pre class="instructions">git hist --all</pre>
 <h4>En sortie:</h4>
 <pre class="sample">$ git hist --all
-* 2bd7c9b 2012-05-07 | Rendre interactif (master) [Jim Weirich]
-* fe9164f 2012-05-07 | Ajout d'un LISEZMOI [Jim Weirich]
-| * 43ab17e 2012-05-07 | Rakefile mis à jour (HEAD, saluer) [Jim Weirich]
-| * 868fc3c 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
-| * d9d726a 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
+* f289457 2012-05-08 | Rendre interactif (master) [Jim Weirich]
+* 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI [Jim Weirich]
+| * dcc1252 2012-05-08 | Rakefile mis à jour (HEAD, saluer) [Jim Weirich]
+| * cbe47f8 2012-05-08 | bonjour utilise Faireunsalut [Jim Weirich]
+| * 9101cb4 2012-05-08 | Ajout de la classe Faireunsalut [Jim Weirich]
 |/  
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
   </div>
 
   <div id="index">

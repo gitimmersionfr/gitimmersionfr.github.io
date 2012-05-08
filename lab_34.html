@@ -55,7 +55,7 @@
 <ul>
 	<li>Utiliser la commande rebase plutôt que la commande merge.</li>
 </ul>
-<p>Ok, nous sommes maintenant revenu dans le temps avant la première fusion et nous voulons obtenir les changements de master dans notre branche saluer.</p>
+<p>Ok, nous sommes maintenant revenus dans le temps avant la première fusion et nous voulons obtenir les changements de master dans notre branche saluer.</p>
 <p>Cette fois nous allons utiliser la commande rebase à la place de la commande merge pour apporter les changements depuis la branche master.</p>
 <h4>Exécuter:</h4>
 <pre class="instructions">git checkout saluer
@@ -72,17 +72,17 @@ Applying: bonjour utilise Faireunsalut
 Applying: Rakefile mis à jour
 $
 $ git hist
-* c8f930f 2012-05-07 | Rakefile mis à jour (HEAD, saluer) [Jim Weirich]
-* 4a01131 2012-05-07 | bonjour utilise Faireunsalut [Jim Weirich]
-* edbb2f8 2012-05-07 | Ajout de la classe Faireunsalut [Jim Weirich]
-* fe9164f 2012-05-07 | Ajout d'un LISEZMOI (master) [Jim Weirich]
-* 50288bc 2012-05-07 | Ajout d'un Rakefile [Jim Weirich]
-* fdbaff5 2012-05-07 | Déplacement de bonjour.rb dans lib [Jim Weirich]
-* 0eca227 2012-05-07 | Add an author/email comment [Jim Weirich]
-* 392ee14 2012-05-07 | Ajout d'un commentaire (v1) [Jim Weirich]
-* a81dfe7 2012-05-07 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
-* 9de1147 2012-05-07 | Utilisation de ARGV [Jim Weirich]
-* f5556a9 2012-05-07 | Mon premier commit [Jim Weirich]</pre>
+* 55aa3f4 2012-05-08 | Rakefile mis à jour (HEAD, saluer) [Jim Weirich]
+* 45a2e7a 2012-05-08 | bonjour utilise Faireunsalut [Jim Weirich]
+* 011229b 2012-05-08 | Ajout de la classe Faireunsalut [Jim Weirich]
+* 2efeb4e 2012-05-08 | Ajout d'un LISEZMOI (master) [Jim Weirich]
+* 40fb2cc 2012-05-08 | Ajout d'un Rakefile [Jim Weirich]
+* 7ce5d64 2012-05-08 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 35d118c 2012-05-08 | Add an author/email comment [Jim Weirich]
+* 167ff0c 2012-05-08 | Ajout d'un commentaire (v1) [Jim Weirich]
+* a33b91a 2012-05-08 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* f45bf4e 2012-05-08 | Utilisation de ARGV [Jim Weirich]
+* a8bb23a 2012-05-08 | Mon premier commit [Jim Weirich]</pre>
 <h2>Merge VS Rebase <em>01</em></h2>
 <p>Le résultat final de rebase est très similaire à celui de merge. La branche saluer contient maintenant tous ses changements, aussi bien que tous ceux de la branche master. Cependant, l&#8217;arbre de commit est assez différent. L&#8217;arbre de commit pour la branche saluer a été réécrit de manière à ce que la branche master soit une partie de l&#8217;historique de commit. Cela laisse une chaîne de commit linéaire et beaucoup plus facile à lire.</p>
 <h2>Quand faire un Rebase, quand faire un Merge? <em>02</em></h2>
