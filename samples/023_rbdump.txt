@@ -1,0 +1,6 @@
+$ git cat-file -p 9de476b
+# L'argument par défaut est Monde
+# Auteur: Jim Weirich (jim@somewhere.com)
+name = ARGV.first || "Monde"
+
+puts "Bonjour, #{name}!"

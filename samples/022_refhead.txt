@@ -1,0 +1,2 @@
+$ ls .git/refs/heads
+master

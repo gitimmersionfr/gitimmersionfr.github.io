@@ -1,0 +1,24 @@
+$ git log
+commit a9c6007328d30d5714eabd82a9623065317bbe61
+Author: Jim Weirich <jim (at) edgecase.com>
+Date:   Fri Feb 21 00:00:32 2014 +0100
+
+    Ajout d'un commentaire
+
+commit 221243eb14415fdda82f250b687203a9b86e7f08
+Author: Jim Weirich <jim (at) edgecase.com>
+Date:   Fri Feb 21 00:00:32 2014 +0100
+
+    Ajouter une valeur par défaut
+
+commit 80fc66619ac45befe54d3fb9f7e8f1e31dedf0bc
+Author: Jim Weirich <jim (at) edgecase.com>
+Date:   Fri Feb 21 00:00:32 2014 +0100
+
+    Using ARGV
+
+commit 834ca4fb417c0fce7d315a267ecabe89a2206f80
+Author: Jim Weirich <jim (at) edgecase.com>
+Date:   Fri Feb 21 00:00:32 2014 +0100
+
+    Mon premier commit

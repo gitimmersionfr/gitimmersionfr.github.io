@@ -1,0 +1,4 @@
+$ cat bonjour.rb
+name = ARGV.first || "Monde"
+
+puts "Bonjour, #{name}!"

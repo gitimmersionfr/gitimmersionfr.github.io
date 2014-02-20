@@ -1,0 +1,3 @@
+$ git commit --amend -m "Add an author/email comment"
+[master 83558be] Add an author/email comment
+ 1 file changed, 2 insertions(+), 1 deletion(-)

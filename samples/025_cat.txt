@@ -1,0 +1,6 @@
+$ cat lib/bonjour.rb
+# L'argument par défaut est Monde
+# Auteur: Jim Weirich (jim@somewhere.com)
+name = ARGV.first || "Monde"
+
+puts "Bonjour, #{name}!"

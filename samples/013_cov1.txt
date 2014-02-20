@@ -1,0 +1,3 @@
+$ git checkout v1
+Previous HEAD position was 221243e... Ajouter une valeur par défaut
+HEAD is now at a9c6007... Ajout d'un commentaire

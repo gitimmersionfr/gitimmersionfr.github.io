@@ -1,0 +1,2 @@
+$ git init
+Initialized empty Git repository in /home/thomas/git/git_immersion/auto/bonjour/.git/

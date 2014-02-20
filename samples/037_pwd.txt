@@ -1,0 +1,2 @@
+$ pwd
+/home/thomas/git/git_immersion/auto

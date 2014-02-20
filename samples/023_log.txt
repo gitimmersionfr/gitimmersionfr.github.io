@@ -1,0 +1,2 @@
+$ git hist --max-count=1
+* 6f69f38 2014-02-21 | Ajout d'un Rakefile (HEAD, master) [Jim Weirich]

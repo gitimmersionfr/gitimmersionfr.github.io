@@ -1,0 +1,2 @@
+$ git cat-file -t 6f69f38
+commit

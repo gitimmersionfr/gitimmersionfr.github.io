@@ -1,0 +1,3 @@
+$ git commit -m "La fusion depuis master corrige le conflit"
+[master ee34d83] La fusion depuis master corrige le conflit
+ 1 file changed, 4 insertions(+), 1 deletion(-)

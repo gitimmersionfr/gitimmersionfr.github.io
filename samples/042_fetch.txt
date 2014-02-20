@@ -1,0 +1,3 @@
+$ git fetch
+From /home/thomas/git/git_immersion/auto/bonjour
+   5c4b651..6831029  master     -> origin/master

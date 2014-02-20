@@ -1,0 +1,5 @@
+$ git hist master --all
+* a9c6007 2014-02-21 | Ajout d'un commentaire (v1, master) [Jim Weirich]
+* 221243e 2014-02-21 | Ajouter une valeur par défaut (HEAD, v1-beta) [Jim Weirich]
+* 80fc666 2014-02-21 | Using ARGV [Jim Weirich]
+* 834ca4f 2014-02-21 | Mon premier commit [Jim Weirich]

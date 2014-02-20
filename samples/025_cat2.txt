@@ -1,0 +1,8 @@
+$ cat lib/bonjour.rb
+require 'faireunsalut'
+
+# L'argument par défaut est Monde
+name = ARGV.first || "Monde"
+
+faireunsalut = Faireunsalut.new(name)
+puts faireunsalut.saluer

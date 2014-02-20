@@ -1,0 +1,6 @@
+$ git hist
+* 83558be 2014-02-21 | Add an author/email comment (HEAD, master) [Jim Weirich]
+* a9c6007 2014-02-21 | Ajout d'un commentaire (v1) [Jim Weirich]
+* 221243e 2014-02-21 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 80fc666 2014-02-21 | Using ARGV [Jim Weirich]
+* 834ca4f 2014-02-21 | Mon premier commit [Jim Weirich]

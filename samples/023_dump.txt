@@ -1,0 +1,7 @@
+$ git cat-file -p 6f69f38
+tree 717551b224c3ee878b9760775a8aaa3aef63f633
+parent c8d6b6136842306fdd51384fdbb63280b0e4e29f
+author Jim Weirich <jim (at) edgecase.com> 1392937233 +0100
+committer Jim Weirich <jim (at) edgecase.com> 1392937233 +0100
+
+Ajout d'un Rakefile

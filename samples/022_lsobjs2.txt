@@ -1,0 +1,2 @@
+$ ls -C .git/objects/08
+2992369f69e5409933b2167e85899ddd1a26ae

@@ -1,0 +1,3 @@
+$ ls -C .git
+branches	config	     HEAD   index  logs     ORIG_HEAD
+COMMIT_EDITMSG	description  hooks  info   objects  refs

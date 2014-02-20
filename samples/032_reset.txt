@@ -1,0 +1,2 @@
+$ git reset --hard 83b5dc6
+HEAD is now at 83b5dc6 Rakefile mis à jour

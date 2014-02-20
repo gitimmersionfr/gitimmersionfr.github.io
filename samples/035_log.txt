@@ -1,0 +1,9 @@
+$ git hist
+* 5c4b651 2014-02-21 | Ajout d'un README (HEAD, master) [Jim Weirich]
+* 6f69f38 2014-02-21 | Ajout d'un Rakefile [Jim Weirich]
+* c8d6b61 2014-02-21 | Déplacement de bonjour.rb dans lib [Jim Weirich]
+* 83558be 2014-02-21 | Add an author/email comment [Jim Weirich]
+* a9c6007 2014-02-21 | Ajout d'un commentaire (v1) [Jim Weirich]
+* 221243e 2014-02-21 | Ajouter une valeur par défaut (v1-beta) [Jim Weirich]
+* 80fc666 2014-02-21 | Using ARGV [Jim Weirich]
+* 834ca4f 2014-02-21 | Mon premier commit [Jim Weirich]

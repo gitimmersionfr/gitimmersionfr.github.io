@@ -1,0 +1,2 @@
+$ git reset --hard v1
+HEAD is now at a9c6007 Ajout d'un commentaire

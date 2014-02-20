@@ -1,0 +1,3 @@
+$ git hist --max-count=2
+* 6831029 2014-02-21 | Changed README in original repo (HEAD, origin/master, origin/HEAD, master) [Jim Weirich]
+* 5c4b651 2014-02-21 | Ajout d'un README [Jim Weirich]

@@ -1,0 +1,2 @@
+$ cat .git/refs/tags/v1
+a9c6007328d30d5714eabd82a9623065317bbe61

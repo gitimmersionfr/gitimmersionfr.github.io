@@ -1,0 +1,5 @@
+$ git merge origin/master
+Updating 5c4b651..6831029
+Fast-forward
+ README |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)

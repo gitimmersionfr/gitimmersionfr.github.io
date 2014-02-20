@@ -1,0 +1,2 @@
+$ git merge greet
+fatal: 'greet' does not point to a commit
